@@ -376,3 +376,21 @@ body{ overflow-x:hidden; }
   .nav-links a{ display:block; padding:13px 18px; text-align:left; border:2px solid transparent; }
   .nav-links a.active { border-color: var(--ink); }
 }
+
+/* ---------- homepage enrichment: FAQ ---------- */
+.faq-list { display: grid; gap: 16px; max-width: 860px; margin: 0 auto; }
+.faq-item {
+  background: #fff; border: 2px solid var(--ink); border-radius: var(--radius);
+  padding: 22px 26px; box-shadow: var(--hard-sm);
+}
+.faq-item:nth-child(even) { background: var(--pink-pale); }
+.faq-item summary {
+  cursor: pointer; font-weight: 800; text-transform: uppercase; letter-spacing: .02em;
+  color: var(--ink); font-size: 15.5px; list-style: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 14px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: var(--pink-deep); font-size: 24px; line-height: 1; flex-shrink: 0; }
+.faq-item[open ] summary::after { content: "–"; }
+.faq-item p { color: var(--ink-soft); font-size: 14.5px; margin-top: 12px; font-weight: 500; }
+img[width], img[height] { height: auto; }
